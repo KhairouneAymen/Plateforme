@@ -8,7 +8,7 @@
 {
   "host": "localhost",
   "user": "root",
-  "database": "posts",
+  "database": "testdb",
   "password": "< password >"
 }
 ```
