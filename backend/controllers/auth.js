@@ -13,6 +13,7 @@ exports.signup = async (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
   const password = req.body.password;
+  const tel = req.body.tel;
 
   try {
     const hashedPassword = await bcrypt.hash(password, 12);
@@ -21,6 +22,7 @@ exports.signup = async (req, res, next) => {
       name: name,
       email: email,
       password: hashedPassword,
+      tel : tel,
     };
 
     const result = await User.save(userDetails);

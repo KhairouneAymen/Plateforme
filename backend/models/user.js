@@ -5,6 +5,7 @@ module.exports = class User {
     this.name = name;
     this.email = email;
     this.password = password;
+    this.tel = tel;
   }
 
   static find(email) {
@@ -13,8 +14,8 @@ module.exports = class User {
 
   static save(user) {
     return db.execute(
-      'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
-      [user.name, user.email, user.password]
+      'INSERT INTO users (name, email, password , tel) VALUES (?, ?, ?,?)',
+      [user.name, user.email, user.password, user.tel]
     );
   }
 };

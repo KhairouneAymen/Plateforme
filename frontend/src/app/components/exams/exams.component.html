@@ -1,1 +1,14 @@
-<p>exams works!</p>
+<app-create-exam (create)="createExams()"></app-create-exam>
+
+<mat-card *ngFor="let exams of exams$ | async">
+
+  <div class="exam-title">
+    {{ exams.title }}
+  </div>
+  <div class="exam-meta">
+    {{ exams.created }}
+  </div>
+  <div class="exam-body">
+    {{ exams.body }}
+  </div>
+</mat-card>

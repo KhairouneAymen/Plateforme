@@ -20,6 +20,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ExamsComponent } from './components/exams/exams.component';
+import { CreateExamComponent } from './components/create-exam/create-exam.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ExamsComponent } from './components/exams/exams.component';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    ExamsComponent
+    ExamsComponent,
+    CreateExamComponent
   ],
   imports: [
     BrowserModule,

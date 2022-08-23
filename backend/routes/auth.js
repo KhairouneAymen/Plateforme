@@ -23,6 +23,7 @@ router.post(
       })
       .normalizeEmail(),
     body('password').trim().isLength({ min: 7 }),
+    body('tel').trim().not().isEmpty({min : 8 })
   ],
   authController.signup
 );

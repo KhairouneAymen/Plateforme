@@ -1,28 +1,46 @@
-<mat-toolbar color="accent">
-    <span>
-      <a routerLink="/">
-        <span>Platefrome éducative</span>
-      </a>
-    </span>
-    <span>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/exams"
-      >
-        <span>Exams</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/login"
-      >
-        <span>Login</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/signup"
-      >
-        <span>Signup</span>
-      </a>
-    </span>
-  </mat-toolbar>
-  
+
+<mat-toolbar id="override-toolbar">
+  <span>
+    <a routerLink="/">
+      <span>Plateforme éducative</span>
+    </a>
+  </span>
+  <span>
+    <a
+      *ngIf="isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/exams"
+    >
+      <span>Exams</span>
+    </a>
+    <a
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+      <span>Login</span>
+    </a>
+    <a
+      *ngIf="isAuthenticated"
+      (click)="logout()"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+      <span>Logout</span>
+    </a>
+    <a
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/home"
+    >
+      <span>Service</span>
+    </a>
+    <a
+    *ngIf="!isAuthenticated"
+    routerLinkActive="active-link"
+    routerLink="/home"
+  >
+    <span>Contact</span>
+  </a>
+  </span>
+</mat-toolbar>

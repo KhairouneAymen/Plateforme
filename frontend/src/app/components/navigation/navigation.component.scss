@@ -1,15 +1,18 @@
 mat-toolbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 64px;
-    a {
-      text-decoration: none;
-      &.active-link {
-        color: white;
-      }
-      span {
-        margin-left: 24px;
-      }
+  display: flex;
+  justify-content: space-between;
+  padding: 0 64px;
+  a {
+    text-decoration: none;
+    color: black;
+    &.active-link {
+      color: white;
+    }
+    span {
+      margin-left: 24px;
     }
   }
-  
+}
+#override-toolbar {
+  background: radial-gradient(#fff,rgb(70, 235, 158));
+}

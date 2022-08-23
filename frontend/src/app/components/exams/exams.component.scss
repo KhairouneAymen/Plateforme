@@ -1,0 +1,17 @@
+mat-card {
+    margin-bottom: 1em;
+    font-size: 24px;
+    button {
+      float: right;
+    }
+    .exam-title {
+      font-weight: bold;
+    }
+    .exam-meta {
+      font-size: 16px;
+      font-style: italic;
+    }
+    .exam-body {
+      margin-top: 1em;
+    }
+  }
